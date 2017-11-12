@@ -1,0 +1,552 @@
+/*
+ Theme Name:   Lukov
+ Theme URI:    lukov.space
+ Description:  Child Theme
+ Author:       Lukov I
+ Author URI:   lukov.space
+ Template:     iwata
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  lukov-child
+
+
+/* Structure ------------------------------------------- */
+
+@import url('https://cdn.jsdelivr.net/genericons/3.4.1/genericons.css');
+.post, .comments-container, .comment-respond, .page-title, .archive-nav, #infinite-handle {
+  text-align: center;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.post-meta, .comments-title-container, .comment-reply-title {
+  position: static;
+}
+
+.content, .comments-section {
+  padding: 60px 0;
+}
+
+/* Blog ------------------------------------------------ */
+
+.post+.post, .infinite-wrap, #infinite-handle, .infinite-loader .spinner {
+  text-align: center;
+  padding-top: 40px;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+.post-meta {
+  margin-top: 8px;
+}
+
+.post-meta p {
+  display: inline-block;
+  margin: 0 12px 0 0;
+  padding-left: 24px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.post-meta.bottom p {
+  display: block;
+}
+
+.post-meta.bottom p+p {
+  margin-top: 10px;
+}
+
+.post-meta.bottom p+p span {
+  top: 0;
+}
+
+/* Post Formats ---------------------------------------- */
+
+.posts .format-aside .post-meta, .posts .format-image .post-meta, .posts .format-quote .post-meta {
+  margin-top: 14px;
+}
+
+/* Single Post ----------------------------------------- */
+
+.post-navigation {
+  margin-top: 60px;
+}
+
+/* Comments -------------------------------------------- */
+
+.comments-title-container, .comment-reply-title {
+  margin-bottom: 60px;
+}
+
+.comments-title, .comment-reply-title {
+  font-size: 1.5em;
+}
+
+.comment-header {
+  padding-right: 40px;
+}
+
+.comment-header h4:before {
+  left: auto;
+  right: 0;
+}
+
+.comments-nav {
+  margin-top: 40px;
+}
+
+/* Respond --------------------------------------------- */
+
+.comments-container+.comment-respond {
+  margin-top: 40px;
+  padding-top: 40px;
+}
+
+.comments-container+.comment-respond .comment-reply-title {
+  margin-bottom: 40px;
+}
+
+/* Pagination ------------------------------------------ */
+
+.page-title {
+  margin-bottom: 40px;
+}
+
+.archive-nav {
+  margin-top: 60px;
+}
+
+.post-header h1 {
+  text-align: center
+}
+
+.post-title {
+  text-align: center
+}
+
+.menu-social-links-container ul {
+  width: 50%;
+  margin: auto;
+  padding: 35px;
+  text-align: center;
+}
+
+#nav-social li {
+  width: 3em;
+  display: inline-block;
+  list-style: none;
+  position: relative;
+  left: -.5em;
+}
+
+#nav-social a:before {
+  font-size: 1.5em;
+  padding: 0 .5em;
+  font-family: Genericons;
+  float: left;
+  text-indent: 0;
+}
+
+#nav-social li a:hover:before {
+  color: inherit;
+}
+
+#nav-social a[href*="facebook.com"]:before {
+  content: '\f203';
+  color: #3b5998
+}
+
+#nav-social a[href*="plus.google.com"]:before {
+  content: '\f206';
+  color: #dd4b39
+}
+
+#nav-social a[href*="github.com"]:before {
+  content: '\f200';
+  color: #333
+}
+
+#nav-social a[href*="instagram.com"]:before {
+  content: '\f215';
+  color: #3f729b
+}
+
+#nav-social a[href*="skype.com"]:before, #nav-social a[href*="skype:"]:before {
+  content: '\f220';
+  color: #00aff0
+}
+
+#nav-social a[href*="stumbleupon.com"]:before {
+  content: '\f223';
+  color: #ff2618
+}
+
+#nav-social a[href*="tumblr.com"]:before {
+  content: '\f214';
+  color: #34526f
+}
+
+#nav-social a[href*="twitter.com"]:before {
+  content: '\f202';
+  color: #3cf
+}
+
+#nav-social a[href*="vimeo.com"]:before {
+  content: '\f212';
+  color: #1AB7EA
+}
+
+#nav-social a[href*="wordpress.org"]:before, #nav-social a[href*="wordpress.com"]:before {
+  content: '\f205';
+  color: #21759b
+}
+
+#nav-social a[href*="youtube.com"]:before {
+  content: '\f213';
+  color: #c4302b
+}
+
+.footer-menu, .likely, .likely>*, .likely__button, .likely__widget {
+  display: inline-block
+}
+
+.likely, .likely__widget {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  text-indent: 0!important;
+  list-style: none!important;
+  font-weight: 400;
+  font-family: Helvetica Neue, Arial, sans-serif
+}
+
+.likely__widget {
+  margin: 0;
+  font-size: inherit
+}
+
+.likely {
+  opacity: 0;
+  font-size: 0!important
+}
+
+.likely_visible {
+  opacity: 1;
+  transition: opacity .1s ease-in
+}
+
+.likely>* {
+  visibility: hidden
+}
+
+.likely_visible>* {
+  visibility: inherit
+}
+
+.likely__widget {
+  position: relative;
+  white-space: nowrap;
+  transition: background .33s ease-out, color .33s ease-out, fill .33s ease-out
+}
+
+.likely__button {
+  position: relative;
+  user-select: none
+}
+
+.likely__counter {
+  display: none;
+  position: relative;
+  font-weight: 400
+}
+
+.likely_ready .likely__counter {
+  display: inline-block
+}
+
+.likely_ready .likely__counter_empty {
+  display: none
+}
+
+.likely__button, .likely__counter, .likely__icon, .likely__widget {
+  vertical-align: top
+}
+
+.likely__widget:active, .likely__widget:focus, .likely__widget:hover {
+  transition: none;
+  cursor: pointer
+}
+
+@media (hover:none) {
+  .likely__widget:active, .likely__widget:focus, .likely__widget:hover {
+    transition: background .33s ease-out, color .33s ease-out, fill .33s ease-out;
+    cursor: unset
+  }
+}
+
+.likely__icon {
+  position: relative;
+  text-align: left;
+  display: inline-block
+}
+
+.author-bio, .likely__counter {
+  text-align: center
+}
+
+.likely svg {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 16px;
+  height: 16px
+}
+
+.likely__button, .likely__counter {
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  outline: 0;
+  line-height: inherit;
+  cursor: inherit
+}
+
+.likely__button:empty {
+  display: none
+}
+
+.likely .likely__widget {
+  color: #000;
+  background: rgba(231, 231, 231, .8)
+}
+
+.likely .likely__counter {
+  background-size: 1px 1px;
+  background-repeat: repeat-y;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, 0) .5px, rgba(0, 0, 0, 0) 100%)
+}
+
+.likely-light .likely__widget {
+  color: #fff;
+  fill: #fff;
+  background: rgba(236, 236, 236, .16);
+  text-shadow: rgba(0, 0, 0, .2) 0 0 .33em
+}
+
+.likely-light .likely__counter {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, .4) 0, rgba(255, 255, 255, 0) .5px, rgba(255, 255, 255, 0) 100%)
+}
+
+.likely__widget_facebook {
+  fill: #425497
+}
+
+.likely__widget_facebook:active, .likely__widget_facebook:focus, .likely__widget_facebook:hover {
+  background: rgba(207, 212, 229, .8)
+}
+
+@media (hover:none) {
+  .likely__widget_facebook:active, .likely__widget_facebook:focus, .likely__widget_facebook:hover {
+    background: rgba(231, 231, 231, .8)
+  }
+}
+
+.likely-light .likely__widget_facebook:active, .likely-light .likely__widget_facebook:focus, .likely-light .likely__widget_facebook:hover {
+  text-shadow: #425497 0 0 .25em;
+  background: rgba(66, 84, 151, .7)
+}
+
+@media (hover:none) {
+  .likely-light .likely__widget_facebook:active, .likely-light .likely__widget_facebook:focus, .likely-light .likely__widget_facebook:hover {
+    text-shadow: rgba(0, 0, 0, .2) 0 0 .33em;
+    background: rgba(236, 236, 236, .16)
+  }
+}
+
+.likely__widget_twitter {
+  fill: #00b7ec
+}
+
+.likely__widget_twitter:active, .likely__widget_twitter:focus, .likely__widget_twitter:hover {
+  background: rgba(191, 237, 250, .8)
+}
+
+@media (hover:none) {
+  .likely__widget_twitter:active, .likely__widget_twitter:focus, .likely__widget_twitter:hover {
+    background: rgba(231, 231, 231, .8)
+  }
+}
+
+.likely-light .likely__widget_twitter:active, .likely-light .likely__widget_twitter:focus, .likely-light .likely__widget_twitter:hover {
+  text-shadow: #00b7ec 0 0 .25em;
+  background: rgba(0, 183, 236, .7)
+}
+
+@media (hover:none) {
+  .likely-light .likely__widget_twitter:active, .likely-light .likely__widget_twitter:focus, .likely-light .likely__widget_twitter:hover {
+    text-shadow: rgba(0, 0, 0, .2) 0 0 .33em;
+    background: rgba(236, 236, 236, .16)
+  }
+}
+
+.likely__widget_gplus {
+  fill: #dd4241
+}
+
+.likely__widget_gplus:active, .likely__widget_gplus:focus, .likely__widget_gplus:hover {
+  background: rgba(246, 207, 207, .8)
+}
+
+@media (hover:none) {
+  .likely__widget_gplus:active, .likely__widget_gplus:focus, .likely__widget_gplus:hover {
+    background: rgba(231, 231, 231, .8)
+  }
+}
+
+.likely-light .likely__widget_gplus:active, .likely-light .likely__widget_gplus:focus, .likely-light .likely__widget_gplus:hover {
+  text-shadow: #dd4241 0 0 .25em;
+  background: rgba(221, 66, 65, .7)
+}
+
+@media (hover:none) {
+  .likely-light .likely__widget_gplus:active, .likely-light .likely__widget_gplus:focus, .likely-light .likely__widget_gplus:hover {
+    text-shadow: rgba(0, 0, 0, .2) 0 0 .33em;
+    background: rgba(236, 236, 236, .16)
+  }
+}
+
+.likely__widget_telegram {
+  fill: #34abde
+}
+
+.likely__widget_telegram:active, .likely__widget_telegram:focus, .likely__widget_telegram:hover {
+  background: rgba(204, 234, 246, .8)
+}
+
+@media (hover:none) {
+  .likely__widget_telegram:active, .likely__widget_telegram:focus, .likely__widget_telegram:hover {
+    background: rgba(231, 231, 231, .8)
+  }
+}
+
+.likely-light .likely__widget_telegram:active, .likely-light .likely__widget_telegram:focus, .likely-light .likely__widget_telegram:hover {
+  text-shadow: #34abde 0 0 .25em;
+  background: rgba(52, 171, 222, .7)
+}
+
+@media (hover:none) {
+  .likely-light .likely__widget_telegram:active, .likely-light .likely__widget_telegram:focus, .likely-light .likely__widget_telegram:hover {
+    text-shadow: rgba(0, 0, 0, .2) 0 0 .33em;
+    background: rgba(236, 236, 236, .16)
+  }
+}
+
+.likely {
+  margin: 0 -5px -10px
+}
+
+.likely .likely__widget {
+  line-height: 20px;
+  font-size: 14px;
+  border-radius: 3px;
+  height: 22px;
+  margin: 0 5px 10px
+}
+
+.likely .likely__icon {
+  width: 22px;
+  height: 22px
+}
+
+.likely .likely__button {
+  padding: 1px 4px 1px 0
+}
+
+.likely .likely__counter {
+  padding: 1px 4px
+}
+
+.likely-big {
+  margin: 0 -6px -12px
+}
+
+.likely-big .likely__widget {
+  line-height: 28px;
+  font-size: 18px;
+  border-radius: 4px;
+  height: 32px;
+  margin: 0 6px 12px
+}
+
+.likely-big .likely__icon {
+  width: 32px;
+  height: 32px
+}
+
+.likely-big .likely__button {
+  padding: 2px 6px 2px 0
+}
+
+.likely-big .likely__counter {
+  padding: 2px 6px
+}
+
+.likely-big svg {
+  left: 4px;
+  top: 4px;
+  width: 24px;
+  height: 24px
+}
+
+.likely-small {
+  margin: 0 -4px -8px
+}
+
+.likely-small .likely__widget {
+  line-height: 14px;
+  font-size: 12px;
+  border-radius: 2px;
+  height: 18px;
+  margin: 0 4px 8px
+}
+
+.likely-small .likely__icon {
+  width: 18px;
+  height: 18px
+}
+
+.likely-small .likely__button {
+  padding: 2px 3px 2px 0
+}
+
+.likely-small .likely__counter {
+  padding: 2px 3px
+}
+
+.likely-small svg {
+  left: 3px;
+  top: 3px;
+  width: 12px;
+  height: 12px
+}
+
+.likely__widget_whatsapp {
+  fill: #25d366
+}
+
+.likely__widget_whatsapp:active, .likely__widget_whatsapp:focus, .likely__widget_whatsapp:hover {
+  background: rgba(200, 244, 216, .8)
+}
+
+@media (hover:none) {
+  .likely__widget_whatsapp:active, .likely__widget_whatsapp:focus, .likely__widget_whatsapp:hover {
+    background: rgba(231, 231, 231, .8)
+  }
+}
+
+.likely-light .likely__widget_whatsapp:active, .likely-light .likely__widget_whatsapp:focus, .likely-light .likely__widget_whatsapp:hover {
+  text-shadow: #25d366 0 0 .25em;
+  background: rgba(37, 211, 102, .7)
+}
